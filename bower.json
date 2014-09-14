@@ -1,0 +1,25 @@
+{
+  "name": "compo-tabs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/atmajs/compo-tabs",
+  "authors": [
+    "Alex Kit <alex.kit@atmajs.com>"
+  ],
+  "description": "MaskJS Tabs component (Atma.js)",
+  "main": "lib/tabs.min.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "build",
+    "src"
+  ],
+  "devDependencies": {
+    "maskjs": "latest",
+    "includejs": "latest",
+    "ruta": "latest"
+  }
+}

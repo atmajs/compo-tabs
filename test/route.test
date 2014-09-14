@@ -1,0 +1,55 @@
+UTest({
+	'should load with defined route' (done) {
+		UTest
+			.server
+			.request('/examples/route.html#baz')
+			.done((document, win) => {
+				
+				var $baz = $(document)
+					.find('.tab-pane[name=foo]')
+					.eq_('length', 1)
+					.eq_('is', ':visible', false)
+					.next()
+					.eq_('attr', 'name', 'baz')
+					.eq_('is', ':visible', true);
+				
+				
+				win.ruta.navigate('foo');
+				setTimeout(() => {
+					$baz
+						.eq_('is', ':visible', false)
+						.prev()
+						.eq_('is', ':visible', true)
+						;
+						
+					window.location.hash = '';
+					setTimeout(done);
+				});
+			})
+	},
+	'should load with default route' () {
+		return UTest
+			.server
+			.request('/examples/route.html')
+			.done((document, window) => {
+				
+				var $qux = $(document)
+					.find('.tab-pane[name=qux]')
+					.eq_('length', 1)
+					.eq_('is', ':visible', true);
+				
+				$(document)
+					.find('.tab-pane:visible')
+					.eq_('length', 1)
+					.eq_('attr', 'name', 'qux');
+					
+				return;
+				window.ruta.navigate('baz');
+				$qux
+					.eq_('is', ':visible', false)
+					.prev('[name=baz]')
+					.eq_('is', ':visible', true)
+					;
+			})
+	}
+})

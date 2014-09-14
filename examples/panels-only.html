@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<link href='/bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' />
+	<script src='/bower_components/maskjs/lib/mask.js'></script>
+	<script src='/bower_components/includejs/lib/include.js'></script>
+	<script src='/bower_components/ruta/lib/ruta.js'></script>
+	<script src='/lib/tabs.js'></script>
+	<script type='text/mask' data-run="true">
+		a:tabs visible=baz {
+			@panel name=foo >
+				span.foo > 'Foo'
+			
+			@panel name=baz >
+				span.baz > 'Baz'
+		}
+	</script>
+	<script type='application/javascript'>
+		mask.run();
+	</script>
+</body>
+</html>
