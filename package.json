@@ -1,5 +1,6 @@
 {
-    "dependencies": {
+    "devDependencies": {
+        "atma": ">0.9.26",
         "atma-loader-traceur": ">0.0.0",
         "atma-loader-less": ">0.0.0"
     },
