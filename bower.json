@@ -19,7 +19,8 @@
     ],
     "devDependencies": {
         "maskjs": "latest",
-        "includejs": "latest",
-        "ruta": "latest"
+        "mask-animation": "latest",
+        "ruta": "latest",
+        "bootstrap": "latest"
     }
 }

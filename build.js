@@ -4,7 +4,7 @@ module.exports = {
 		files: 'builds/**',
 		output: 'lib/'
 	},
-	'build css': {
+	'// build css (use bootstrap css)': {
 		action: 'import',
 		files: 'src/style/tabs.less',
 		output: 'lib/tabs.css'
@@ -24,14 +24,11 @@ module.exports = {
 
 	'watch': {
 		files: 'src/**',
-		config: [ '#[build js]', '#[build css]' ]
+		config: '#[build js]'
 	},
 	
-	'defaults': ['build js', 'build css', 'uglify']
+	'defaults': ['build js', 'uglify']
 };
-
-
-
 
 function JSHint() {
 	

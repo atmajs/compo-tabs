@@ -21,7 +21,8 @@
 	}
 }(this, function(global, mask, ruta, include, $){
 	
-	include && include.css('./tabs.css');
+	//- removed (use boostrap css and application level overrides)
+	//-- include && include.css('./tabs.css');
 
 	// import ./utils/log.es6
 	// import ./utils/children.es6
