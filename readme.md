@@ -4,15 +4,16 @@
 
 ```scss
 a:tabs
-	x-visible = 'foo' // optional, name of the current visible tab, default - the first one
-	x-route = '/baz'  // optional, listens hashchange or history API changes
+	x-visible = 'foo' // optional, name of the current visible tab 
+	x-route = '/baz'  // optional, listens hashchange or history API changes 
 	x-anchors = true  // all panels are visible and it behaves like a scrollspy
 	
 	{ /*Template*/ }
 ```
 
 - Best works with [RutaJS](https://github.com/atmajs/ruta) and [Mask.Animation](https://github.com/atmajs/mask-animation)
-- Renders the Bootstraps HTML and the class structure. _Tired always to write extra html code?[Boostrap Tabs](http://getbootstrap.com/javascript/#tabs-usage)
+- Renders the Bootstraps HTML and the class structure.
+_Tired always to write extra html code?[Boostrap Tabs](http://getbootstrap.com/javascript/#tabs-usage)_
 
 ##### Templates
 - Headers And Panels
