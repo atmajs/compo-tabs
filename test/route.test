@@ -24,11 +24,11 @@ UTest({
 						
 					window.location.hash = '';
 					setTimeout(done);
-				});
+				}, 50);
 			})
 	},
-	'should load with default route' () {
-		return UTest
+	'should load with default route' (done) {
+		UTest
 			.server
 			.request('/examples/route.html')
 			.done((document, window) => {
@@ -43,13 +43,18 @@ UTest({
 					.eq_('length', 1)
 					.eq_('attr', 'name', 'qux');
 					
-				return;
 				window.ruta.navigate('baz');
-				$qux
-					.eq_('is', ':visible', false)
-					.prev('[name=baz]')
-					.eq_('is', ':visible', true)
-					;
+				
+				setTimeout(()=>{
+					$qux
+						.eq_('is', ':visible', false)
+						.prev('[name=baz]')
+						.eq_('is', ':visible', true)
+						;
+						
+					window.location.hash = '';
+					setTimeout(done);
+				}, 50);
 			})
 	}
 })
