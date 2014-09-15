@@ -79,7 +79,7 @@ _Tired always to write extra html code?[Boostrap Tabs](http://getbootstrap.com/j
 	Check if the component contains the tab name.
 
 
-###### Example
+###### Api Example
 _template_
 ```scss
 	section >
@@ -105,5 +105,22 @@ tab.getActiveName() //> foo
 tab.setActive('baz');
 ```
 
+### Examples
+
+- [/examples](/examples)
+
+```bash
+# install atma toolkit
+npm install atma
+# run server
+atma server
+
+# navigate `http://localhost:5777/examples/simple.html`
+```
+
+### Test
+```bash
+npm test
+```
 
 :copyright: MIT - Atma.js Project
