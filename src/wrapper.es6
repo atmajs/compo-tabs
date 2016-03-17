@@ -31,5 +31,6 @@
 	
 	// import ./compo.es6
 	
-	mask.registerHandler('a:tabs', TabsCompo);
+	mask.define('a:tabs', TabsCompo);
+	mask.define('Tabs', TabsCompo);
 }));

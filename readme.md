@@ -2,8 +2,8 @@
 [![Build Status](https://travis-ci.org/atmajs/compo-tabs.png?branch=master)](https://travis-ci.org/atmajs/compo-tabs)
 [![Bower version](https://badge.fury.io/bo/compo-tabs.svg)](http://badge.fury.io/bo/compo-tabs)
 
-```scss
-a:tabs
+```mask
+Tabs
 	x-visible = 'foo' // optional, name of the current visible tab 
 	x-route = '/baz'  // optional, listens hashchange or history API changes 
 	x-anchors = true  // all panels are visible and it behaves like a scrollspy
@@ -18,8 +18,8 @@ _Tired always to write extra html code?[Boostrap Tabs](http://getbootstrap.com/j
 ##### Templates
 - Headers And Panels
 
-	```scss
-	a:tabs x-visibile = baz {
+	```mask
+	Tabs x-visibile = baz {
 		@tab name = foo {
 			@head > 'FooHeader'
 			@body > 'FooContent' 
@@ -33,8 +33,8 @@ _Tired always to write extra html code?[Boostrap Tabs](http://getbootstrap.com/j
 	
 - Panels only
 
-	```scss
-	a:tabs {
+	```mask
+	Tabs {
 		@panel name=foo >
 			span.foo > 'Foo'
 		
@@ -45,8 +45,8 @@ _Tired always to write extra html code?[Boostrap Tabs](http://getbootstrap.com/j
 	
 - Animations
 
-	```scss
-	a:tabs {
+	```mask
+	Tabs {
 		// Tabs Template
 		// ...
 		
@@ -81,9 +81,9 @@ _Tired always to write extra html code?[Boostrap Tabs](http://getbootstrap.com/j
 
 ###### Api Example
 _template_
-```scss
+```mask
 	section >
-		a:tabs #tabs-example {
+		Tabs #tabs-example {
 			@tab name = foo {
 				@head > 'FooHeader'
 				@body > 'FooContent' 
