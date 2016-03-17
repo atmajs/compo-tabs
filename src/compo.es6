@@ -3,7 +3,7 @@ var templates = {
 		ul.nav.nav-tabs .-tab-headers >
 			@each (tab) >
 				@head
-					class="-tab-header ~[: $a.visible === '@tab.attr.name' ? 'active']"
+					class="-tab-header ~[ $a.visible === '@tab.attr.name' ? 'active']"
 					name='@tab.attr.name'
 					as=li {
 						a href='#' x-signal='click: changeTab' >
@@ -13,7 +13,7 @@ var templates = {
 		.tab-content.-tab-panels  >
 			@each (tab) >
 				@body
-					class="tab-pane -tab-panel  ~[: $a.visible === '@tab.attr.name' ? 'active']"
+					class="tab-pane -tab-panel  ~[ $a.visible === '@tab.attr.name' ? 'active']"
 					name='@tab.attr.name'
 					as=div
 				;
@@ -24,7 +24,7 @@ var templates = {
 	'@panel': `
 		.tab-content.-tab-panels  >
 			@each (panel) >
-				div class="tab-pane -tab-panel ~[: $a.visible === '@panel.attr.name' ? 'active']"
+				div class="tab-pane -tab-panel ~[ $a.visible === '@panel.attr.name' ? 'active']"
 					name='@panel.attr.name' >
 						@placeholder;
 						
